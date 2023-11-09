@@ -37,6 +37,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03DCD6042AFD87FA00E687DB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				03DCD6082AFD890E00E687DB /* Storyboards */,
+				03DCD6072AFD886300E687DB /* Controllers */,
+				03DCD6062AFD884800E687DB /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		03DCD6052AFD880C00E687DB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				264DFEEB260D07F00035EA15 /* Info.plist */,
+				264DFEE6260D07F00035EA15 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		03DCD6062AFD884800E687DB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				264DFEDD260D07EF0035EA15 /* AppDelegate.swift */,
+				264DFEDF260D07EF0035EA15 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		03DCD6072AFD886300E687DB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				264DFEE1260D07EF0035EA15 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		03DCD6082AFD890E00E687DB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				264DFEE3260D07EF0035EA15 /* Main.storyboard */,
+				264DFEE8260D07F00035EA15 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		264DFED1260D07EF0035EA15 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +101,8 @@
 		264DFEDC260D07EF0035EA15 /* Pr2503 */ = {
 			isa = PBXGroup;
 			children = (
-				264DFEDD260D07EF0035EA15 /* AppDelegate.swift */,
-				264DFEDF260D07EF0035EA15 /* SceneDelegate.swift */,
-				264DFEE1260D07EF0035EA15 /* ViewController.swift */,
-				264DFEE3260D07EF0035EA15 /* Main.storyboard */,
-				264DFEE6260D07F00035EA15 /* Assets.xcassets */,
-				264DFEE8260D07F00035EA15 /* LaunchScreen.storyboard */,
-				264DFEEB260D07F00035EA15 /* Info.plist */,
+				03DCD6052AFD880C00E687DB /* Resources */,
+				03DCD6042AFD87FA00E687DB /* Sources */,
 			);
 			path = Pr2503;
 			sourceTree = "<group>";
