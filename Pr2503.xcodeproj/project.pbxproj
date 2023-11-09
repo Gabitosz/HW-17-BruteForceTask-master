@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03DCD60B2AFD91ED00E687DB /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DCD60A2AFD91ED00E687DB /* String+Ext.swift */; };
 		264DFEDE260D07EF0035EA15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DFEDD260D07EF0035EA15 /* AppDelegate.swift */; };
 		264DFEE0260D07EF0035EA15 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DFEDF260D07EF0035EA15 /* SceneDelegate.swift */; };
 		264DFEE2260D07EF0035EA15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264DFEE1260D07EF0035EA15 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03DCD60A2AFD91ED00E687DB /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		264DFEDA260D07EF0035EA15 /* Pr2503.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pr2503.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		264DFEDD260D07EF0035EA15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		264DFEDF260D07EF0035EA15 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		03DCD6042AFD87FA00E687DB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				03DCD6092AFD91C300E687DB /* Extentions */,
 				03DCD6082AFD890E00E687DB /* Storyboards */,
 				03DCD6072AFD886300E687DB /* Controllers */,
 				03DCD6062AFD884800E687DB /* App */,
@@ -80,6 +83,14 @@
 				264DFEE8260D07F00035EA15 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		03DCD6092AFD91C300E687DB /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				03DCD60A2AFD91ED00E687DB /* String+Ext.swift */,
+			);
+			path = Extentions;
 			sourceTree = "<group>";
 		};
 		264DFED1260D07EF0035EA15 = {
@@ -179,6 +190,7 @@
 			files = (
 				264DFEE2260D07EF0035EA15 /* ViewController.swift in Sources */,
 				264DFEDE260D07EF0035EA15 /* AppDelegate.swift in Sources */,
+				03DCD60B2AFD91ED00E687DB /* String+Ext.swift in Sources */,
 				264DFEE0260D07EF0035EA15 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-cd-RKK">
-                                <rect key="frame" x="184" y="618" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-cd-RKK" userLabel="ChangeBackgroundColor">
+                                <rect key="frame" x="117" y="574" width="183" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Change Background Color"/>
                                 <connections>
-                                    <action selector="onBut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XD4-sb-XPE"/>
+                                    <action selector="onChangeBackgroundColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rkh-F5-vKq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -30,12 +30,12 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="button" destination="3g4-cd-RKK" id="yGm-KB-boF"/>
+                        <outlet property="changeBackgroundColor" destination="3g4-cd-RKK" id="E2B-Vf-fA1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="97"/>
+            <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
         </scene>
     </scenes>
     <resources>
