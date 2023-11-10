@@ -5,6 +5,7 @@ class ViewController: UIViewController {
     // MARK: Outlets
     
     @IBOutlet weak var changeBackgroundColor: UIButton!
+
     
     private var isBlack: Bool = false {
         didSet {
@@ -57,6 +58,7 @@ private func characterAt(index: Int, _ array: [String]) -> Character {
 }
 
 private func generateBruteForce(_ string: String, fromArray array: [String]) -> String {
+    
     var str: String = string
 
     if str.count <= 0 {
