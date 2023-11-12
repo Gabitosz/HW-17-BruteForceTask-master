@@ -5,4 +5,15 @@
 //  Created by Gabriel Zdravkovici on 12.11.2023.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController {
+    func hideKeyBoardWhenTappedArround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
+}
