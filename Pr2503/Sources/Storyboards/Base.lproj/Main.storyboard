@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -14,28 +14,66 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pr2503" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-cd-RKK" userLabel="ChangeBackgroundColor">
-                                <rect key="frame" x="117" y="574" width="183" height="175"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x6e-zA-65d">
+                                <rect key="frame" x="102" y="304" width="188" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ap-f6-l2M">
+                                <rect key="frame" x="98" y="228" width="196" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="07N-Bd-LMA">
+                                <rect key="frame" x="309" y="304" width="32" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-cd-RKK" userLabel="ChangeBackgroundColor">
+                                <rect key="frame" x="76" y="702" width="245" height="30"/>
                                 <state key="normal" title="Change Background Color"/>
                                 <connections>
                                     <action selector="onChangeBackgroundColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rkh-F5-vKq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2T-P7-hoG">
+                                <rect key="frame" x="70" y="447" width="253" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Generate Password"/>
+                                <connections>
+                                    <action selector="onGeneratePasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rkq-j0-qN5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="o2T-P7-hoG" secondAttribute="trailing" constant="70" id="1e2-ce-x7b"/>
+                            <constraint firstItem="9ap-f6-l2M" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="169" id="67N-uW-ENu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9ap-f6-l2M" secondAttribute="trailing" constant="99" id="EpA-yf-BZA"/>
+                            <constraint firstItem="o2T-P7-hoG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="388" id="Om7-0Q-Wbi"/>
+                            <constraint firstItem="9ap-f6-l2M" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="98" id="THU-4b-lZH"/>
+                            <constraint firstItem="3g4-cd-RKK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="UCt-Ae-Pj0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3g4-cd-RKK" secondAttribute="trailing" constant="72" id="fjf-6I-a05"/>
+                            <constraint firstItem="o2T-P7-hoG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="iFA-C3-nJx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="3g4-cd-RKK" secondAttribute="bottom" constant="86" id="tt6-3o-9WK"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="07N-Bd-LMA" id="gli-WZ-gI7"/>
                         <outlet property="changeBackgroundColor" destination="3g4-cd-RKK" id="E2B-Vf-fA1"/>
+                        <outlet property="generatePassword" destination="o2T-P7-hoG" id="Vy1-Z5-yII"/>
+                        <outlet property="generatedPassword" destination="x6e-zA-65d" id="9i0-RT-0Bk"/>
+                        <outlet property="passwordLabel" destination="9ap-f6-l2M" id="PaC-2C-EAY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="96.428571428571431"/>
+            <point key="canvasLocation" x="133.58778625954199" y="95.070422535211279"/>
         </scene>
     </scenes>
     <resources>
