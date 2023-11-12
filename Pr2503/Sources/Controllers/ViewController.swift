@@ -5,13 +5,20 @@ class ViewController: UIViewController {
     // MARK: Outlets
     
     @IBOutlet weak var changeBackgroundColor: UIButton!
-
+    @IBOutlet weak var generatedPassword: UITextField!
+    @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var generatePassword: UIButton!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var isBlack: Bool = false {
         didSet {
             if isBlack {
+                self.passwordLabel.textColor = .white
+                self.activityIndicator.color = .white
                 self.view.backgroundColor = .black
             } else {
+                self.passwordLabel.textColor = .black
+                self.activityIndicator.color = .gray
                 self.view.backgroundColor = .white
             }
         }
@@ -21,9 +28,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.bruteForce(passwordToUnlock: "1!gr")
-        
-        // Do any additional setup after loading the view.
+        self.hideKeyBoardWhenTappedArround()
     }
     
     // MARK: Actions
@@ -32,19 +37,54 @@ class ViewController: UIViewController {
         isBlack.toggle()
     }
     
+    @IBAction func onGeneratePasswordPressed(_ sender: UIButton) {
+        passwordLabel.isHidden = false
+        activityIndicator.isHidden = false
+        generatedPassword.isSecureTextEntry = false
+        passwordLabel.text = "Generating password..."
+        generatedPassword.text = randomPassword(length: 3)
+        print(generatedPassword.text)
+        
+        guard let password = generatedPassword.text else { return }
+        activityIndicator.startAnimating()
+        
+        
+        DispatchQueue.global().async { [weak self] in
+            self?.bruteForce(passwordToUnlock: password)
+        }
+    
+    }
+    
+    func randomPassword(length: Int) -> String {
+        let allowedCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-_=+[]{}|;:',.<>/?`"
+        let counfOfAllowedCharacters = UInt32(allowedCharacters.count)
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let randomNumber = Int(arc4random_uniform(counfOfAllowedCharacters))
+            let randomIndex = allowedCharacters.index(allowedCharacters.startIndex, offsetBy: randomNumber)
+            let newCharacter = allowedCharacters[randomIndex]
+            randomString += String(newCharacter)
+        }
+        return randomString
+    }
+    
+    
     private func bruteForce(passwordToUnlock: String) {
         let allowedCharacters: [String] = String().printable.map { String($0) }
 
         var password: String = ""
 
-        // Will strangely ends at 0000 instead of ~~~
-        while password != passwordToUnlock { // Increase MAXIMUM_PASSWORD_SIZE value for more
+        while password != passwordToUnlock {
             password = generateBruteForce(password, fromArray: allowedCharacters)
-//             Your stuff here
-            print(password)
-            // Your stuff here
         }
-        print(password)
+
+        DispatchQueue.main.async { [weak self] in
+            self?.passwordLabel.text = password
+            self?.activityIndicator.isHidden = true
+            self?.activityIndicator.stopAnimating()
+            self?.generatedPassword.isSecureTextEntry = true
+        }
     }
 }
 
