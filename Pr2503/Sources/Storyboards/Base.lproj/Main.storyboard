@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pr2503" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x6e-zA-65d">
@@ -24,7 +24,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ap-f6-l2M">
-                                <rect key="frame" x="98" y="228" width="196" height="21"/>
+                                <rect key="frame" x="98" y="189" width="178" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,18 +34,27 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-cd-RKK" userLabel="ChangeBackgroundColor">
-                                <rect key="frame" x="76" y="702" width="245" height="30"/>
+                                <rect key="frame" x="76" y="551" width="227" height="30"/>
                                 <state key="normal" title="Change Background Color"/>
                                 <connections>
                                     <action selector="onChangeBackgroundColorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rkh-F5-vKq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2T-P7-hoG">
-                                <rect key="frame" x="70" y="447" width="253" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WF3-kb-hXm">
+                                <rect key="frame" x="166" y="497" width="60" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Generate Password"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop"/>
                                 <connections>
-                                    <action selector="onGeneratePasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rkq-j0-qN5"/>
+                                    <action selector="onStopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yJO-AW-xSB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2T-P7-hoG">
+                                <rect key="frame" x="70" y="411" width="253" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Find Password"/>
+                                <connections>
+                                    <action selector="onFindPasswordPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rkq-j0-qN5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,10 +74,11 @@
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="07N-Bd-LMA" id="gli-WZ-gI7"/>
-                        <outlet property="changeBackgroundColor" destination="3g4-cd-RKK" id="E2B-Vf-fA1"/>
-                        <outlet property="generatePassword" destination="o2T-P7-hoG" id="Vy1-Z5-yII"/>
-                        <outlet property="generatedPassword" destination="x6e-zA-65d" id="9i0-RT-0Bk"/>
+                        <outlet property="changeBackgroundColorButton" destination="3g4-cd-RKK" id="E2B-Vf-fA1"/>
+                        <outlet property="findPasswordButton" destination="o2T-P7-hoG" id="Vy1-Z5-yII"/>
                         <outlet property="passwordLabel" destination="9ap-f6-l2M" id="PaC-2C-EAY"/>
+                        <outlet property="passwordTextField" destination="x6e-zA-65d" id="9i0-RT-0Bk"/>
+                        <outlet property="stopButton" destination="WF3-kb-hXm" id="TAb-tc-Vex"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
